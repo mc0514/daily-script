@@ -81,8 +81,10 @@ for index=1:len
 
         %data_control_chenweibing_stc_pca=rindices3'
         savedata=rindices3';
+        savedataname=strcat('data_control_',name,'_',datakind,'_pca');
+        eval([char(savedataname),'=','savedata;'])
         savename=strcat('data_control_',name,'_',datakind,'_pca.mat');
         %save data_control_chenweibing_stc_pca.mat data_control_chenweibing_stc_pca;
-        save(char(savename),'savedata');
+        save(char(savename),char(savedataname));
       end
 end
